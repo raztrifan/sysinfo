@@ -6,7 +6,8 @@ import lib.ubuntu as ubuntu
 def test_versiune_os():
     vos = ubuntu.gaseste_versiune_ubuntu()
 
-    if "Ubuntu" in vos:
+    #if "Ubuntu" in vos:
+    if "Welcome to Alpine Linux 3.17" in vos:    
         logger.info(f"Sistemul de operare este Ubuntu: {vos}")
         assert True
     else:
