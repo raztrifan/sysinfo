@@ -14,7 +14,7 @@ USER sysinfo
 WORKDIR /home/sysinfo/
 
 COPY app app
-#COPY dockerstart.sh dockerstart.sh
+COPY dockerstart.sh dockerstart.sh
 
 RUN python -m venv .venv
 RUN .venv/bin/pip install -r app/quickrequirements.txt
@@ -23,5 +23,5 @@ WORKDIR /home/sysinfo/app
 
 # runtime configuration
 EXPOSE 5011
-ENTRYPOINT ["./dockerstart.sh"]
+#ENTRYPOINT ["./dockerstart.sh"]
 #CMD flask run --host 0.0.0.0 -p 5010
